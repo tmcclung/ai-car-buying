@@ -61,7 +61,7 @@ COPY --from=builder /app/.next /app/.next
 EXPOSE 4001
 
 ENV PORT 4001
-ENV NODE_OPTIONS "-r dd-trace/init"
+# ENV NODE_OPTIONS "-r dd-trace/init"
 
 WORKDIR /app
 CMD ["pnpm", "start"]
