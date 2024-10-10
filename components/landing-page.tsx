@@ -105,7 +105,7 @@ export function LandingPageComponent() {
                   <div className="mt-4 flex items-center">
                     {!debtBookLogoError ? (
                       <Image
-                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DB-Logo_Blue-MD-AX8qss5c3JystqyyNzAiKzp0jO26bG.webp"
+                        src="/DB-Logo_Blue-MD-AX8qss5c3JystqyyNzAiKzp0jO26bG.webp"
                         alt="DebtBook Logo"
                         width={120}
                         height={40}
