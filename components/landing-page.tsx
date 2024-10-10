@@ -1,4 +1,5 @@
 'use client'
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
@@ -10,6 +11,7 @@ import { useState, useEffect } from 'react'
 export function LandingPageComponent() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [debtBookLogoError, setDebtBookLogoError] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -49,6 +51,7 @@ export function LandingPageComponent() {
               <Link href="https://release.com/use-cases" className="text-sm font-medium hover:text-gray-200 py-2 md:py-0">Use Cases</Link>
               <Link href="#faq" className="text-sm font-medium hover:text-gray-200 py-2 md:py-0">FAQs</Link>
               <Link href="https://release.com/blog" className="text-sm font-medium hover:text-gray-200 py-2 md:py-0">Blog</Link>
+              <Link href="https://docs.release.com" className="text-sm font-medium hover:text-gray-200 py-2 md:py-0">Docs</Link>
               <div className="md:hidden mt-4">
                 <Link href="https://web.release.com/login" className="block text-sm font-medium hover:text-gray-200 py-2">Login</Link>
                 <Link href="https://release.com/signup" className="block mt-2">
@@ -100,13 +103,20 @@ export function LandingPageComponent() {
                     "Release has cut our deployment time by 75% and saved us $200k in DevOps costs annually."
                   </blockquote>
                   <div className="mt-4 flex items-center">
-                    <Image
-                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DB-Logo_Blue-MD-AX8qss5c3JystqyyNzAiKzp0jO26bG.webp"
-                      alt="DebtBook Logo"
-                      width={120}
-                      height={40}
-                      className="mr-2"
-                    />
+                    {!debtBookLogoError ? (
+                      <Image
+                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DB-Logo_Blue-MD-AX8qss5c3JystqyyNzAiKzp0jO26bG.webp"
+                        alt="DebtBook Logo"
+                        width={120}
+                        height={40}
+                        className="mr-2"
+                        onError={() => setDebtBookLogoError(true)}
+                      />
+                    ) : (
+                      <div className="mr-2 w-[120px] h-[40px] bg-gray-200 flex items-center justify-center text-gray-500 text-xs">
+                        DebtBook Logo
+                      </div>
+                    )}
                     <div>
                       <p className="font-semibold">Michael Gorsuch</p>
                       <p className="text-sm text-gray-500">Director of Infrastructure, DebtBook</p>
@@ -234,11 +244,12 @@ export function LandingPageComponent() {
               ))}
             </div>
           </div>
+        
         </section>
 
         <section id="faq" className="w-full py-12 md:py-24 lg:py-32 bg-gray-100">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl  font-bold tracking-tighter sm:text-5xl text-center mb-12">Frequently Asked Questions About Release</h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12">Frequently Asked Questions About Release</h2>
             <Accordion type="single" collapsible className="w-full max-w-3xl mx-auto">
               {[
                 {
@@ -284,6 +295,55 @@ export function LandingPageComponent() {
         </section>
       </main>
 
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-[#29063e] text-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-[#00bb93]">ABOUT</h3>
+              <ul className="space-y-2">
+                <li><Link href="https://release.com/company" className="hover:text-[#00bb93] transition-colors">Our Company</Link></li>
+                <li><Link href="https://release.com/press-releases" className="hover:text-[#00bb93] transition-colors">Press Releases</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-[#00bb93]">PRODUCTS</h3>
+              <ul className="space-y-2">
+                <li><Link href="https://release.com/product/instant-datasets" className="hover:text-[#00bb93] transition-colors">Instant Datasets</Link></li>
+                <li><Link href="https://release.com/product/release-delivery" className="hover:text-[#00bb93] transition-colors">Release Delivery</Link></li>
+                <li><Link href="https://release.com/get-started" className="hover:text-[#00bb93] transition-colors">Environments as a Service</Link></li>
+                <li><Link href="https://release.com/pricing" className="hover:text-[#00bb93] transition-colors">Pricing</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-[#00bb93]">WHY US?</h3>
+              <ul className="space-y-2">
+                <li><Link href="https://release.com/whyrelease" className="hover:text-[#00bb93] transition-colors">Why Release</Link></li>
+                <li><Link href="https://release.com/build-vs-buy" className="hover:text-[#00bb93] transition-colors">Build vs. Buy</Link></li>
+                <li><Link href="https://release.com/staging-environments" className="hover:text-[#00bb93] transition-colors">Staging Environments</Link></li>
+                <li><Link href="https://release.com/ephemeral-environments" className="hover:text-[#00bb93] transition-colors">Ephemeral Environments</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-[#00bb93]">RESOURCES</h3>
+              <ul className="space-y-2">
+                <li><Link href="https://release.com/blog" className="hover:text-[#00bb93] transition-colors">Blog</Link></li>
+                <li><Link href="https://release.com/use-cases" className="hover:text-[#00bb93] transition-colors">Use Cases</Link></li>
+                <li><Link href="https://release.com/case-studies" className="hover:text-[#00bb93] transition-colors">Case Studies</Link></li>
+                <li><Link href="https://release.com/events" className="hover:text-[#00bb93] transition-colors">Events</Link></li>
+                <li><Link href="https://release.com/resource-hub" className="hover:text-[#00bb93] transition-colors">Resource Hub</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-[#00bb93]">GET HELP</h3>
+              <ul className="space-y-2">
+                <li><Link href="https://docs.release.com" className="hover:text-[#00bb93] transition-colors">Docs</Link></li>
+                <li><Link href="https://status.release.com/" className="hover:text-[#00bb93] transition-colors">Status</Link></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <footer className="border-t bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-4 py-10 md:h-24 md:flex-row md:items-center md:py-0">
@@ -296,8 +356,8 @@ export function LandingPageComponent() {
               />
             </div>
             <nav className="flex items-center justify-center gap-4 text-sm md:justify-end">
-              <Link href="https://release.com/terms-of-service" className="text-gray-500 hover:text-gray-900">Terms of Service</Link>
-              <Link href="https://release.com/privacy-policy" className="text-gray-500 hover:text-gray-900">Privacy Policy</Link>
+              <Link href="https://release.com/terms-of-service" className="text-gray-500 hover:text-gray-900 transition-colors">Terms of Service</Link>
+              <Link href="https://release.com/privacy-policy" className="text-gray-500 hover:text-gray-900 transition-colors">Privacy Policy</Link>
             </nav>
           </div>
         </div>
