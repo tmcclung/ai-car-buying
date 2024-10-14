@@ -137,7 +137,7 @@ export function LandingPageComponent() {
                         </div>
                       )}
                       <div>
-                        <p className="font-semibold">Michael Gorsuch</p>
+                        <p className="font-semibold">Michael G.</p>
                         <p className="text-sm text-gray-500">Director of Infrastructure, DebtBook</p>
                       </div>
                     </div>
@@ -231,17 +231,17 @@ export function LandingPageComponent() {
               <div className="grid gap-6 lg:grid-cols-3">
                 {[
                   {
-                    name: "Lilith Carpenter",
+                    name: "Lilith C.",
                     role: "Staff Software Engineer, DebtBook",
                     content: "Within 10 minutes of pushing up a commit I have an environment link for others to see my work. Today a ticket from creation to completely reviewed/tested and merged takes < 2 hours. A year ago that would have taken days.",
                   },
                   {
-                    name: "Ivan Lee",
+                    name: "Ivan L.",
                     role: "CEO, Datasaur",
                     content: "Release has enabled us to move quickly and deliver higher quality solutions. Instead of building an environment platform ourselves, we've focused on our application and scaled rapidly without sacrificing capabilities. They've been an invaluable partner in our growth.",
                   },
                   {
-                    name: "Emily Rodriguez",
+                    name: "Emily R.",
                     role: "Product Manager, HealthTech Innovations",
                     content: "Our team collaboration has never been better. Sharing environments is now a breeze  with Release.",
                   },
