@@ -5,11 +5,11 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Release - Accelerate Your Development Workflow with Ephemeral Environments',
+  title: 'Release - Faster, Cheaper DevOps. Ephemeral Environments',
   description: 'Create, manage, and scale on-demand environments in minutes. Empower developers, reduce DevOps costs, and accelerate your development workflow with Release.com.',
   keywords: 'ephemeral environments, development workflow, DevOps, cloud infrastructure, CI/CD, developer productivity, on-demand environments',
   openGraph: {
-    title: 'Release - Accelerate Your Development Workflow',
+    title: 'Release - Faster, Cheaper DevOps. Ephemeral Environments',
     description: 'Create on-demand environments in minutes. Empower developers, reduce costs with Release.com.',
     url: 'https://release.com',
     siteName: 'Release.com',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Release - Accelerate Your Development Workflow',
+    title: 'Release - Faster, Cheaper DevOps. Ephemeral Environments',
     description: 'Create on-demand environments in minutes. Empower developers, reduce costs with Release.com.',
     images: ['https://release.com/twitter-image.jpg'],
   },
