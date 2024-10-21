@@ -44,8 +44,8 @@ export function LandingPageComponent() {
         defer
         src="//js.hs-scripts.com/8047877.js"
       />
-      <div className="flex flex-col min-h-screen bg-white">
-        <header className={`sticky top-0 z-50 w-full border-b bg-[#29063e] text-white transition-all duration-300 ${isScrolled ? 'py-2' : 'py-4'}`}>
+      <div className="flex flex-col min-h-screen bg-gray-900 text-gray-100">
+        <header className={`sticky top-0 z-50 w-full border-b border-gray-800 bg-gray-900 text-gray-100 transition-all duration-300 ${isScrolled ? 'py-2' : 'py-4'}`}>
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between">
               <Link href="/" className="flex items-center space-x-2">
@@ -63,23 +63,24 @@ export function LandingPageComponent() {
                   {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
                 </Button>
               </div>
-              <nav className={`${isMenuOpen ? 'flex' : 'hidden'} absolute top-full left-0 right-0 flex-col bg-[#29063e] p-4 md:relative md:flex md:flex-row md:items-center md:space-x-4 md:p-0`}>
-                <Link href="#features" className="text-sm font-medium hover:text-gray-200 py-2 md:py-0">Features</Link>
-                <Link href="https://release.com/pricing" className="text-sm font-medium hover:text-gray-200 py-2 md:py-0">Pricing</Link>
-                <Link href="#how-it-works" className="text-sm font-medium hover:text-gray-200 py-2 md:py-0">How it Works</Link>
-                <Link href="https://release.com/use-cases" className="text-sm font-medium hover:text-gray-200 py-2 md:py-0">Use Cases</Link>
-                <Link href="#faq" className="text-sm font-medium hover:text-gray-200 py-2 md:py-0">FAQs</Link>
-                <Link href="https://release.com/blog" className="text-sm font-medium hover:text-gray-200 py-2 md:py-0">Blog</Link>
-                <Link href="https://docs.release.com" className="text-sm font-medium hover:text-gray-200 py-2 md:py-0">Docs</Link>
+              <nav className={`${isMenuOpen ? 'flex' : 'hidden'} absolute top-full left-0 right-0 flex-col bg-gray-800 p-4 md:relative md:flex md:flex-row md:items-center md:space-x-4 md:p-0 md:bg-transparent`}>
+                <Link href="#features" className="text-sm font-medium hover:text-gray-300 py-2 md:py-0">Features</Link>
+                <Link href="https://release.com/pricing" className="text-sm font-medium hover:text-gray-300 py-2 md:py-0">Pricing</Link>
+                <Link href="#how-it-works" className="text-sm font-medium hover:text-gray-300 py-2 md:py-0">How it Works</Link>
+                <Link href="https://release.com/use-cases" className="text-sm font-medium hover:text-gray-300 py-2 md:py-0">Use Cases</Link>
+                <Link href="#faq" className="text-sm font-medium hover:text-gray-300 py-2 md:py-0">FAQs</Link>
+                <Link href="https://release.com/blog" className="text-sm font-medium hover:text-gray-300 py-2 md:py-0">Blog</Link>
+                <Link href="https://docs.release.com" className="text-sm font-medium hover:text-gray-300 py-2 md:py-0">Docs</Link>
+                <Link href="/release-ai" className="text-sm font-medium hover:text-gray-300 py-2 md:py-0">Release.ai</Link>
                 <div className="md:hidden mt-4">
-                  <Link href="https://web.release.com/login" className="block text-sm font-medium hover:text-gray-200 py-2">Login</Link>
+                  <Link href="https://web.release.com/login" className="block text-sm font-medium hover:text-gray-300 py-2">Login</Link>
                   <Link href="https://release.com/signup" className="block mt-2">
                     <Button className="w-full bg-[#00bb93] text-white hover:bg-[#00bb93]/90">Get Started</Button>
                   </Link>
                 </div>
               </nav>
               <div className="hidden md:flex items-center space-x-4">
-                <Link href="https://web.release.com/login" className="text-sm font-medium hover:text-gray-200">Login</Link>
+                <Link href="https://web.release.com/login" className="text-sm font-medium hover:text-gray-300">Login</Link>
                 <Link href="https://release.com/signup">
                   <Button className="bg-[#00bb93] text-white hover:bg-[#00bb93]/90">Get Started</Button>
                 </Link>
@@ -94,18 +95,18 @@ export function LandingPageComponent() {
               <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
                 <div className="flex flex-col justify-center space-y-4">
                   <div className="space-y-2">
-                    <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+                    <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-white">
                       Faster, Cheaper DevOps. Happier Developers.
                     </h1>
-                    <p className="max-w-[600px] text-gray-500 md:text-xl">
+                    <p className="max-w-[600px] text-gray-400 md:text-xl">
                       Accelerate your development workflow with Release. Create, manage, and scale on-demand environments in minutes. Empower your developers and reduce DevOps costs.
                     </p>
                   </div>
                   <ul className="grid gap-2 py-4">
-                    <li className="flex items-center"><CheckIcon className="mr-2 h-4 w-4" /> Instant environment creation</li>
-                    <li className="flex items-center"><CheckIcon className="mr-2 h-4 w-4" /> Automated infrastructure management</li>
-                    <li className="flex items-center"><CheckIcon className="mr-2 h-4 w-4" /> Seamless team collaboration</li>
-                    <li className="flex items-center"><CheckIcon className="mr-2 h-4 w-4" /> Significant cost savings</li>
+                    <li className="flex items-center"><CheckIcon className="mr-2 h-4 w-4 text-[#00bb93]" /> Instant environment creation</li>
+                    <li className="flex items-center"><CheckIcon className="mr-2 h-4 w-4 text-[#00bb93]" /> Automated infrastructure management</li>
+                    <li className="flex items-center"><CheckIcon className="mr-2 h-4 w-4 text-[#00bb93]" /> Seamless team collaboration</li>
+                    <li className="flex items-center"><CheckIcon className="mr-2 h-4 w-4 text-[#00bb93]" /> Significant cost savings</li>
                   </ul>
                   <div className="flex flex-col gap-2 min-[400px]:flex-row">
                     <Link href="https://release.com/signup">
@@ -117,8 +118,8 @@ export function LandingPageComponent() {
                   </div>
                 </div>
                 <div className="flex flex-col justify-center space-y-4">
-                  <div className="bg-gray-100 p-6 rounded-lg">
-                    <blockquote className="text-lg font-semibold">
+                  <div className="bg-gray-800 p-6 rounded-lg">
+                    <blockquote className="text-lg font-semibold text-gray-100">
                       "Release has cut our deployment time by 75% and saved us $200k in DevOps costs annually."
                     </blockquote>
                     <div className="mt-4 flex items-center">
@@ -126,19 +127,19 @@ export function LandingPageComponent() {
                         <Image
                           src="/DB-Logo_Blue-MD-AX8qss5c3JystqyyNzAiKzp0jO26bG.webp"
                           alt="DebtBook Logo"
-                          width={120}
-                          height={40}
+                          width={60}
+                          height={20}
                           className="mr-2"
                           onError={() => setDebtBookLogoError(true)}
                         />
                       ) : (
-                        <div className="mr-2 w-[120px] h-[40px] bg-gray-200 flex items-center justify-center text-gray-500 text-xs">
+                        <div className="mr-2 w-[60px] h-[20px] bg-gray-700 flex items-center justify-center text-gray-300 text-xs">
                           DebtBook Logo
                         </div>
                       )}
                       <div>
-                        <p className="font-semibold">Michael G.</p>
-                        <p className="text-sm text-gray-500">Director of Infrastructure, DebtBook</p>
+                        <p className="font-semibold text-gray-100">Michael G.</p>
+                        <p className="text-sm text-gray-400">Director of Infrastructure, DebtBook</p>
                       </div>
                     </div>
                   </div>
@@ -147,22 +148,31 @@ export function LandingPageComponent() {
             </div>
           </section>
 
-          <section id="features" className="w-full py-12 md:py-24 lg:py-32 bg-gray-100">
+          <section id="features" className="w-full py-12 md:py-24 lg:py-32 bg-gray-800">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12">Key Features of Release</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12 text-white">Key Features of Release</h2>
               <div className="grid gap-6 lg:grid-cols-2 xl:grid-cols-4">
                 {[
-                  { title: "Instant Environments", description: "Spin up full-stack environments in minutes, not days. Accelerate your development process." },
+                  { title: "Instant Environments", description: (
+                    <>
+                      Spin up full-stack ephemeral environments in minutes, not days. Accelerate your development process with on-demand, disposable environments. <Link href="https://ephemeral-environments.com" className="text-[#00bb93] hover:underline">Learn more about Ephemeral Environments</Link>.
+                    </>
+                  )},
                   { title: "Automated DevOps", description: "Let our platform handle the infrastructure management for you. Focus on coding, not configuration." },
                   { title: "Team Collaboration", description: "Share environments instantly with your entire team. Improve communication and productivity." },
                   { title: "Cost Optimization", description: "Pay only for what you use, scale as you grow. Reduce infrastructure and personnel costs." },
+                  { title: "Reproducible AI Environments", description: (
+                    <>
+                      Create secure and consistent AI environments on-demand. Streamline your AI development workflow with Release.ai. <Link href="https://release.ai" className="text-[#00bb93] hover:underline">Learn More about Release.ai</Link>
+                    </>
+                  )},
                 ].map((feature, index) => (
-                  <Card key={index}>
+                  <Card key={index} className="bg-gray-700 border-gray-600">
                     <CardHeader>
-                      <CardTitle>{feature.title}</CardTitle>
+                      <CardTitle className="text-white">{feature.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p>{feature.description}</p>
+                      <p className="text-gray-300">{feature.description}</p>
                     </CardContent>
                   </Card>
                 ))}
@@ -172,16 +182,16 @@ export function LandingPageComponent() {
 
           <section id="how-it-works" className="w-full py-12 md:py-24 lg:py-32">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12">How Release Works</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12 text-white">How Release Works</h2>
               <div className="grid gap-6 lg:grid-cols-3">
                 {[
                   { title: "Connect", description: "Link your Git repository to Release. Seamless integration with your existing workflow." },
                   { title: "Configure", description: "Set up your environment specifications. Customize to your project's needs." },
                   { title: "Deploy", description: "Instantly create environments for each pull request. Accelerate your review process." },
                 ].map((step, index) => (
-                  <Card key={index}>
+                  <Card key={index} className="bg-gray-700 border-gray-600">
                     <CardHeader>
-                      <CardTitle className="flex items-center">
+                      <CardTitle className="flex items-center text-white">
                         <span className="mr-2 bg-[#00bb93] text-white rounded-full w-8 h-8 flex items-center justify-center">
                           {index + 1}
                         </span>
@@ -189,7 +199,7 @@ export function LandingPageComponent() {
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p>{step.description}</p>
+                      <p className="text-gray-300">{step.description}</p>
                     </CardContent>
                   </Card>
                 ))}
@@ -202,9 +212,43 @@ export function LandingPageComponent() {
             </div>
           </section>
 
-          <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100">
+          <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-800">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12">Why Choose Release for Your Development Workflow?</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12 text-white">Reproducible AI Environments</h2>
+              <div className="grid gap-12 lg:grid-cols-2 items-center">
+                <div>
+                  <h3 className="text-2xl font-semibold mb-4 text-white">Streamline Your AI Development</h3>
+                  <p className="text-lg text-gray-300 mb-6">
+                    Release.ai offers reproducible and secure AI environments on-demand, paralleling our approach to general development environments. Simplify your AI workflow and focus on innovation.
+                  </p>
+                  <ul className="space-y-2 mb-6">
+                    <li className="flex items-center"><CheckIcon className="mr-2 h-5 w-5 text-[#00bb93]" /> Instant AI-ready environments</li>
+                    <li className="flex items-center"><CheckIcon className="mr-2 h-5 w-5 text-[#00bb93]" /> Support for popular AI frameworks and tools</li>
+                    <li className="flex items-center"><CheckIcon className="mr-2 h-5 w-5 text-[#00bb93]" /> Seamless integration with your existing workflow</li>
+                    <li className="flex items-center"><CheckIcon className="mr-2 h-5 w-5  text-[#00bb93]" /> Scalable infrastructure for AI projects</li>
+                  </ul>
+                  <p className="mt-4 mb-6">
+                    <Link href="/release-ai">
+                      <Button size="lg" className="bg-[#00bb93] text-white hover:bg-[#00bb93]/90">Explore Release.ai</Button>
+                    </Link>
+                  </p>
+                </div>
+                <div className="flex items-center justify-center">
+                  <Image
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/releaseaiimage-cHfK2RLJZ8CGCjoAhDcfbCt4lTz10d.webp"
+                    alt="Release.ai Interface"
+                    width={600}
+                    height={400}
+                    className="rounded-lg shadow-lg"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="w-full py-12 md:py-24 lg:py-32">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12 text-white">Why Choose Release for Your Development Workflow?</h2>
               <div className="grid gap-6 lg:grid-cols-2">
                 {[
                   { title: "Faster Development Cycles", description: "Reduce time from code to production significantly. Ship features faster with Release." },
@@ -212,12 +256,12 @@ export function LandingPageComponent() {
                   { title: "Improved Team Productivity", description: "Let developers focus on coding, not environment management. Boost your team's efficiency." },
                   { title: "Enhanced Collaboration", description: "Share environments instantly with stakeholders. Improve feedback and iteration cycles." },
                 ].map((benefit, index) => (
-                  <Card key={index}>
+                  <Card key={index} className="bg-gray-700 border-gray-600">
                     <CardHeader>
-                      <CardTitle>{benefit.title}</CardTitle>
+                      <CardTitle className="text-white">{benefit.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p>{benefit.description}</p>
+                      <p className="text-gray-300">{benefit.description}</p>
                     </CardContent>
                   </Card>
                 ))}
@@ -225,9 +269,9 @@ export function LandingPageComponent() {
             </div>
           </section>
 
-          <section className="w-full py-12 md:py-24 lg:py-32">
+          <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-800">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12">What Our Customers Say About Release</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12 text-white">What Our Customers Say About Release</h2>
               <div className="grid gap-6 lg:grid-cols-3">
                 {[
                   {
@@ -243,13 +287,13 @@ export function LandingPageComponent() {
                   {
                     name: "Emily R.",
                     role: "Product Manager, HealthTech Innovations",
-                    content: "Our team collaboration has never been better. Sharing environments is now a breeze  with Release.",
+                    content: "Our team collaboration has never been better. Sharing environments is now a breeze with Release.",
                   },
                 ].map((testimonial, index) => (
-                  <Card key={index}>
+                  <Card key={index} className="bg-gray-700 border-gray-600">
                     <CardHeader>
-                      <CardTitle>{testimonial.name}</CardTitle>
-                      <p className="text-sm text-gray-500">{testimonial.role}</p>
+                      <CardTitle className="text-white">{testimonial.name}</CardTitle>
+                      <p className="text-sm text-gray-400">{testimonial.role}</p>
                     </CardHeader>
                     <CardContent>
                       <div className="flex mb-2">
@@ -257,7 +301,7 @@ export function LandingPageComponent() {
                           <StarIcon key={i} className="h-5 w-5 fill-current text-yellow-500" />
                         ))}
                       </div>
-                      <p className="italic">"{testimonial.content}"</p>
+                      <p className="italic text-gray-300">"{testimonial.content}"</p>
                     </CardContent>
                   </Card>
                 ))}
@@ -265,9 +309,9 @@ export function LandingPageComponent() {
             </div>
           </section>
 
-          <section id="faq" className="w-full py-12 md:py-24 lg:py-32 bg-gray-100">
+          <section id="faq" className="w-full py-12 md:py-24 lg:py-32">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12">Frequently Asked Questions About Release</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12 text-white">Frequently Asked Questions About Release</h2>
               <Accordion type="single" collapsible className="w-full max-w-3xl mx-auto">
                 {[
                   {
@@ -287,22 +331,22 @@ export function LandingPageComponent() {
                     answer: "Release integrates seamlessly with popular tools like GitHub, GitLab, Bitbucket, Kubernetes, and Terraform, among others. This allows you to incorporate Release into your existing workflow with minimal disruption.",
                   },
                 ].map((faq, index) => (
-                  <AccordionItem key={index} value={`item-${index}`}>
-                    <AccordionTrigger>{faq.question}</AccordionTrigger>
-                    <AccordionContent>{faq.answer}</AccordionContent>
+                  <AccordionItem key={index} value={`item-${index}`} className="border-gray-700">
+                    <AccordionTrigger className="text-white hover:text-gray-300">{faq.question}</AccordionTrigger>
+                    <AccordionContent className="text-gray-300">{faq.answer}</AccordionContent>
                   </AccordionItem>
                 ))}
               </Accordion>
             </div>
           </section>
 
-          <section className="w-full py-12 md:py-24 lg:py-32 bg-[#29063e] text-white">
+          <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-800">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex flex-col items-center space-y-4 text-center">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white">
                   Ready to Transform Your Development Process with Release?
                 </h2>
-                <p className="mx-auto max-w-[700px] text-white/80 md:text-xl">
+                <p className="mx-auto max-w-[700px] text-gray-300 md:text-xl">
                   Join the companies that have accelerated their development and reduced costs with Release. Experience the power of ephemeral environments today.
                 </p>
                 <Link href="https://release.com/signup">
@@ -313,7 +357,7 @@ export function LandingPageComponent() {
           </section>
         </main>
 
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-[#29063e] text-white">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-800 text-gray-300">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
               <div>
@@ -362,7 +406,7 @@ export function LandingPageComponent() {
           </div>
         </section>
 
-        <footer className="border-t bg-background">
+        <footer className="border-t border-gray-800 bg-gray-900">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col gap-4 py-10 md:h-24 md:flex-row md:items-center md:py-0">
               <div className="flex flex-1 items-center justify-center md:justify-start">
@@ -371,11 +415,12 @@ export function LandingPageComponent() {
                   alt="Release Logo"
                   width={90}
                   height={20}
+                  className="brightness-0 invert"
                 />
               </div>
               <nav className="flex items-center justify-center gap-4 text-sm md:justify-end">
-                <Link href="https://release.com/terms-of-service" className="text-gray-500 hover:text-gray-900 transition-colors">Terms of Service</Link>
-                <Link href="https://release.com/privacy-policy" className="text-gray-500 hover:text-gray-900 transition-colors">Privacy Policy</Link>
+                <Link href="https://release.com/terms-of-service" className="text-gray-400 hover:text-gray-300 transition-colors">Terms of Service</Link>
+                <Link href="https://release.com/privacy-policy" className="text-gray-400 hover:text-gray-300 transition-colors">Privacy Policy</Link>
               </nav>
             </div>
           </div>
