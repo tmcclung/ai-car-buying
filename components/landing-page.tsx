@@ -228,14 +228,14 @@ export function LandingPageComponent() {
                     <li className="flex items-center"><CheckIcon className="mr-2 h-5 w-5  text-[#00bb93]" /> Scalable infrastructure for AI projects</li>
                   </ul>
                   <p className="mt-4 mb-6">
-                    <Link href="/release-ai">
+                    <Link href="https://release.ai">
                       <Button size="lg" className="bg-[#00bb93] text-white hover:bg-[#00bb93]/90">Explore Release.ai</Button>
                     </Link>
                   </p>
                 </div>
                 <div className="flex items-center justify-center">
                   <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/releaseaiimage-cHfK2RLJZ8CGCjoAhDcfbCt4lTz10d.webp"
+                    src="/releaseaiimage.webp"
                     alt="Release.ai Interface"
                     width={600}
                     height={400}
