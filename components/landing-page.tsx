@@ -71,7 +71,7 @@ export function LandingPageComponent() {
                 <Link href="#faq" className="text-sm font-medium hover:text-gray-300 py-2 md:py-0">FAQs</Link>
                 <Link href="https://release.com/blog" className="text-sm font-medium hover:text-gray-300 py-2 md:py-0">Blog</Link>
                 <Link href="https://docs.release.com" className="text-sm font-medium hover:text-gray-300 py-2 md:py-0">Docs</Link>
-                <Link href="/release-ai" className="text-sm font-medium hover:text-gray-300 py-2 md:py-0">Release.ai</Link>
+                <Link href="https://release.ai" className="text-sm font-medium hover:text-gray-300 py-2 md:py-0">Release.ai</Link>
                 <div className="md:hidden mt-4">
                   <Link href="https://web.release.com/login" className="block text-sm font-medium hover:text-gray-300 py-2">Login</Link>
                   <Link href="https://release.com/signup" className="block mt-2">
