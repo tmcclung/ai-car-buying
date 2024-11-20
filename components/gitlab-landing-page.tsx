@@ -116,15 +116,12 @@ export function GitLabLandingPageComponent() {
                 <div className="flex flex-col justify-center space-y-4">
                   <div className="bg-gray-800 p-6 rounded-lg">
                     <blockquote className="text-lg font-semibold text-gray-100">
-                      "We switched from GitLab to Release and cut our deployment time by 75%, saving $200k in DevOps costs annually."
+                      "Release offers a more modern, efficient approach to DevOps compared to GitLab. It's revolutionized our workflow and significantly reduced our infrastructure costs."
                     </blockquote>
                     <div className="mt-4 flex items-center">
-                      <div className="mr-2 w-[60px] h-[20px] bg-gray-700 flex items-center justify-center text-gray-300 text-xs">
-                        Logo
-                      </div>
                       <div>
-                        <p className="font-semibold text-gray-100">Michael G.</p>
-                        <p className="text-sm text-gray-400">Director of Infrastructure, Tech Company</p>
+                        <p className="font-semibold text-gray-100">Alex T.</p>
+                        <p className="text-sm text-gray-400">CTO, Together</p>
                       </div>
                     </div>
                   </div>
@@ -141,7 +138,7 @@ export function GitLabLandingPageComponent() {
                   { title: "Ephemeral Environments", description: "Create disposable environments for every pull request, enabling faster review and testing processes." },
                   { title: "Automated DevOps", description: "Let our platform handle infrastructure management, reducing the need for dedicated DevOps personnel." },
                   { title: "Cost Optimization", description: "Pay only for what you use, significantly reducing infrastructure costs compared to GitLab's static environments." },
-                  { title: "Faster Development Cycles", description: "Streamline your workflow with instant environment creation and automated deployments." },
+                  { title: "Faster Development Cycles", description: "Streamline your workflow with ephemeral environment creation and automated deployments." },
                   { title: "Enhanced Collaboration", description: "Share environments instantly with your team, improving communication and productivity." },
                   { title: "GitLab Integration", description: "Seamlessly integrate with your existing GitLab repositories for a smooth transition." },
                 ].map((feature, index) => (
@@ -201,7 +198,7 @@ export function GitLabLandingPageComponent() {
                 {[
                   { title: "Connect", description: "Link your GitLab repository to Release. Seamless integration with your existing workflow." },
                   { title: "Configure", description: "Set up your environment specifications. Customize to your project's needs." },
-                  { title: "Deploy", description: "Instantly create environments for each pull request. Accelerate your review process." },
+                  { title: "Deploy", description: "Create ephemeral environments for each pull request. Accelerate your review process." },
                 ].map((step, index) => (
                   <Card key={index} className="bg-gray-700 border-gray-600">
                     <CardHeader>
@@ -256,17 +253,17 @@ export function GitLabLandingPageComponent() {
                 {[
                   {
                     name: "Sarah L.",
-                    role: "CTO, TechStart Inc.",
+                    role: "CTO, Datasaur",
                     content: "Switching from GitLab to Release was a game-changer. Our deployment times decreased by 60%, and we've seen a significant boost in developer productivity.",
                   },
                   {
                     name: "Alex K.",
-                    role: "Lead Developer, InnoSoft",
+                    role: "Lead Developer, Together",
                     content: "Release's ephemeral environments have revolutionized our testing process. We catch bugs faster and ship features more confidently than we ever did with GitLab.",
                   },
                   {
                     name: "Maria R.",
-                    role: "DevOps Manager, DataCorp",
+                    role: "DevOps Manager, Drata",
                     content: "The cost savings with Release compared to GitLab are substantial. We've reduced our infrastructure costs by 40% while improving our deployment frequency.",
                   },
                 ].map((testimonial, index) => (

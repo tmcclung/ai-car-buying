@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { CheckIcon, StarIcon, Menu, X } from "lucide-react"
+import { CheckIcon, StarIcon, Menu, X } from 'lucide-react'
 import Link from "next/link"
 import Image from "next/image"
 import Script from 'next/script'
@@ -99,11 +99,11 @@ export function LandingPageComponent() {
                       Faster, Cheaper DevOps. Happier Developers.
                     </h1>
                     <p className="max-w-[600px] text-gray-400 md:text-xl">
-                      Accelerate your development workflow with Release. Create, manage, and scale on-demand environments in minutes. Empower your developers and reduce DevOps costs.
+                      Accelerate your development workflow with Release. Create, manage, and scale Ephemeral environments in minutes. Empower your developers and reduce DevOps costs.
                     </p>
                   </div>
                   <ul className="grid gap-2 py-4">
-                    <li className="flex items-center"><CheckIcon className="mr-2 h-4 w-4 text-[#00bb93]" /> Instant environment creation</li>
+                    <li className="flex items-center"><CheckIcon className="mr-2 h-4 w-4 text-[#00bb93]" /> Ephemeral environments with every pull request</li>
                     <li className="flex items-center"><CheckIcon className="mr-2 h-4 w-4 text-[#00bb93]" /> Automated infrastructure management</li>
                     <li className="flex items-center"><CheckIcon className="mr-2 h-4 w-4 text-[#00bb93]" /> Seamless team collaboration</li>
                     <li className="flex items-center"><CheckIcon className="mr-2 h-4 w-4 text-[#00bb93]" /> Significant cost savings</li>
@@ -153,9 +153,9 @@ export function LandingPageComponent() {
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12 text-white">Key Features of Release</h2>
               <div className="grid gap-6 lg:grid-cols-2 xl:grid-cols-4">
                 {[
-                  { title: "Instant Environments", description: (
+                  { title: "Ephemeral Environments", description: (
                     <>
-                      Spin up full-stack ephemeral environments in minutes, not days. Accelerate your development process with on-demand, disposable environments. <Link href="https://ephemeral-environments.com" className="text-[#00bb93] hover:underline">Learn more about Ephemeral Environments</Link>.
+                      Spin up full-stack Ephemeral environments in minutes, not days. Accelerate your development process with Ephemeral, disposable environments. <Link href="https://ephemeral-environments.com" className="text-[#00bb93] hover:underline">Learn more about Ephemeral Environments</Link>.
                     </>
                   )},
                   { title: "Automated DevOps", description: "Let our platform handle the infrastructure management for you. Focus on coding, not configuration." },
@@ -187,7 +187,7 @@ export function LandingPageComponent() {
                 {[
                   { title: "Connect", description: "Link your Git repository to Release. Seamless integration with your existing workflow." },
                   { title: "Configure", description: "Set up your environment specifications. Customize to your project's needs." },
-                  { title: "Deploy", description: "Instantly create environments for each pull request. Accelerate your review process." },
+                  { title: "Deploy", description: "Create Ephemeral environments for each pull request. Accelerate your review process." },
                 ].map((step, index) => (
                   <Card key={index} className="bg-gray-700 border-gray-600">
                     <CardHeader>
@@ -228,14 +228,14 @@ export function LandingPageComponent() {
                     <li className="flex items-center"><CheckIcon className="mr-2 h-5 w-5  text-[#00bb93]" /> Scalable infrastructure for AI projects</li>
                   </ul>
                   <p className="mt-4 mb-6">
-                    <Link href="https://release.ai">
+                    <Link href="/release-ai">
                       <Button size="lg" className="bg-[#00bb93] text-white hover:bg-[#00bb93]/90">Explore Release.ai</Button>
                     </Link>
                   </p>
                 </div>
                 <div className="flex items-center justify-center">
                   <Image
-                    src="/releaseaiimage.webp"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/releaseaiimage-cHfK2RLJZ8CGCjoAhDcfbCt4lTz10d.webp"
                     alt="Release.ai Interface"
                     width={600}
                     height={400}
@@ -347,7 +347,7 @@ export function LandingPageComponent() {
                   Ready to Transform Your Development Process with Release?
                 </h2>
                 <p className="mx-auto max-w-[700px] text-gray-300 md:text-xl">
-                  Join the companies that have accelerated their development and reduced costs with Release. Experience the power of ephemeral environments today.
+                  Join the companies that have accelerated their development and reduced costs with Release. Experience the power of Ephemeral environments today.
                 </p>
                 <Link href="https://release.com/signup">
                   <Button size="lg" className="bg-[#00bb93] text-white hover:bg-[#00bb93]/90">Start Your Free Trial with Release Now</Button>

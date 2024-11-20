@@ -1,5 +1,5 @@
-import { LandingPageComponent } from '@/components/landing-page.tsx'
-import { GitLabLandingPageComponent } from '@/components/gitlab-landing-page.tsx'
+import { LandingPageComponent } from '@/components/landing-page'
+import { GitLabLandingPageComponent } from '@/components/gitlab-landing-page'
 
 export default function Home({
   searchParams,
