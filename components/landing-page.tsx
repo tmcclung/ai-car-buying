@@ -235,7 +235,7 @@ export function LandingPageComponent() {
                 </div>
                 <div className="flex items-center justify-center">
                   <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/releaseaiimage-cHfK2RLJZ8CGCjoAhDcfbCt4lTz10d.webp"
+                    src="/releaseaiimage.webp"
                     alt="Release.ai Interface"
                     width={600}
                     height={400}
