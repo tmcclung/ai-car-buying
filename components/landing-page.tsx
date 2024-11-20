@@ -228,7 +228,7 @@ export function LandingPageComponent() {
                     <li className="flex items-center"><CheckIcon className="mr-2 h-5 w-5  text-[#00bb93]" /> Scalable infrastructure for AI projects</li>
                   </ul>
                   <p className="mt-4 mb-6">
-                    <Link href="/release-ai">
+                    <Link href="https://release.ai">
                       <Button size="lg" className="bg-[#00bb93] text-white hover:bg-[#00bb93]/90">Explore Release.ai</Button>
                     </Link>
                   </p>
