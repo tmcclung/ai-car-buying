@@ -1,9 +1,16 @@
-import { LandingPageComponent } from "@/components/landing-page";
+import { LandingPageComponent } from '@/components/landing-page.tsx'
+import { GitLabLandingPageComponent } from '@/components/gitlab-landing-page.tsx'
 
-export default function Home() {
+export default function Home({
+  searchParams,
+}: {
+  searchParams: { [key: string]: string | string[] | undefined }
+}) {
+  const isGitLabVersion = searchParams.version === 'gitlab'
+
   return (
-    <div>
-      <LandingPageComponent />
-    </div>
-  );
+    <>
+      {isGitLabVersion ? <GitLabLandingPageComponent /> : <LandingPageComponent />}
+    </>
+  )
 }
