@@ -14,12 +14,21 @@ export default function Home() {
     const storedPreference = localStorage.getItem('showGitLabVersion')
     const urlVersion = searchParams.get('version')
 
-    if (urlVersion === 'gitlab' || storedPreference === 'true') {
+    // This logic ensures that:
+    // 1. ?version=gitlab always shows the GitLab version
+    // 2. ?version=regular always shows the regular version
+    // 3. If no version is specified, it uses the stored preference
+    // 4. If no stored preference, it defaults to the regular version
+    if (urlVersion === 'gitlab') {
       setShowGitLabVersion(true)
       localStorage.setItem('showGitLabVersion', 'true')
-    } else {
+    } else if (urlVersion === 'regular' || (!urlVersion && storedPreference !== 'true')) {
       setShowGitLabVersion(false)
       localStorage.setItem('showGitLabVersion', 'false')
+    } else if (storedPreference === 'true') {
+      setShowGitLabVersion(true)
+    } else {
+      setShowGitLabVersion(false)
     }
   }, [searchParams])
 
