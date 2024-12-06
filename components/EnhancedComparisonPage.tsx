@@ -1,10 +1,10 @@
+'use client'
+
 import React from 'react'
 import Link from 'next/link'
 import { Button } from "@/components/ui/button"
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { CheckIcon, XIcon, ArrowRightIcon } from 'lucide-react'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
 
 interface ComparisonPageProps {
   competitorName: string
@@ -19,8 +19,6 @@ interface ComparisonPageProps {
 export function EnhancedComparisonPage({ competitorName, features }: ComparisonPageProps) {
   return (
     <div className="min-h-screen bg-gray-900 text-gray-100">
-      <Header />
-
       <main>
         <section className="py-12 bg-gradient-to-br from-gray-900 via-gray-800 to-[#00bb93]">
           <div className="container mx-auto px-4">
@@ -126,8 +124,6 @@ export function EnhancedComparisonPage({ competitorName, features }: ComparisonP
           </section>
         </div>
       </main>
-
-      <Footer />
     </div>
   )
 }

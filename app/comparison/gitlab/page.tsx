@@ -2,7 +2,7 @@
 
 import { EnhancedComparisonPage } from '@/components/EnhancedComparisonPage'
 
-const gitlabFeatures = [
+export const gitlabFeatures = [
   {
     name: "Ephemeral Environments",
     release: true,

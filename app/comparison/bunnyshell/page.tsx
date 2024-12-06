@@ -2,7 +2,7 @@
 
 import { EnhancedComparisonPage } from '@/components/EnhancedComparisonPage'
 
-const bunnyshellFeatures = [
+export const bunnyshellFeatures = [
   {
     name: "Ephemeral Environments",
     release: true,

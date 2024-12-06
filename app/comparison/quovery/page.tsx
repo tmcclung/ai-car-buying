@@ -2,7 +2,7 @@
 
 import { EnhancedComparisonPage } from '@/components/EnhancedComparisonPage'
 
-const quoveryFeatures = [
+export const quoveryFeatures = [
   {
     name: "Ephemeral Environments",
     release: true,

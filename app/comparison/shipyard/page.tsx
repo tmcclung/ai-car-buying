@@ -2,7 +2,7 @@
 
 import { EnhancedComparisonPage } from '@/components/EnhancedComparisonPage'
 
-const shipyardFeatures = [
+export const shipyardFeatures = [
   {
     name: "Ephemeral Environments",
     release: true,

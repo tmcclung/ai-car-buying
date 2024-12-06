@@ -2,7 +2,7 @@
 
 import { EnhancedComparisonPage } from '@/components/EnhancedComparisonPage'
 
-const signadotFeatures = [
+export const signadotFeatures = [
   {
     name: "Ephemeral Environments",
     release: true,
