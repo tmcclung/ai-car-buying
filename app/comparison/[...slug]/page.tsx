@@ -1,4 +1,4 @@
-import { notFound } from 'next/navigation'
+import { redirect } from 'next/navigation'
 import { EnhancedComparisonPage } from '@/components/EnhancedComparisonPage'
 import { gitlabFeatures } from '../gitlab/features'
 import { signadotFeatures } from '../signadot/features'
@@ -29,7 +29,7 @@ export default function ComparisonPage({ params }: { params: { slug: string[] } 
   const competitorData = competitorMap[competitor as keyof typeof competitorMap]
 
   if (!competitorData) {
-    notFound()
+    redirect('/')
   }
 
   return (
