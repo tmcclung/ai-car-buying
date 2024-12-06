@@ -33,7 +33,7 @@ export function EnhancedComparisonPage({ competitorName, features }: ComparisonP
                   Start Free Trial
                 </Button>
               </Link>
-              <Link href="https://calendly.com/tommy-release-ai/release-founder-chat-comparison">
+              <Link href="https://calendly.com/release-tommy/release-founder-chat-comparison">
                 <Button size="lg" className="w-full sm:w-auto bg-white text-[#00bb93] hover:bg-gray-100 font-bold">
                   Schedule a chat with a Release founder
                 </Button>
@@ -85,7 +85,7 @@ export function EnhancedComparisonPage({ competitorName, features }: ComparisonP
                   Start Your Free Trial <ArrowRightIcon className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
-              <Link href="https://calendly.com/tommy-release-ai/release-founder-chat-comparison">
+              <Link href="https://calendly.com/release-tommy/release-founder-chat-comparison">
                 <Button size="lg" variant="outline" className="w-full sm:w-auto border-[#00bb93] text-[#00bb93] hover:bg-[#00bb93] hover:text-white font-bold">
                   Schedule a chat with a Release founder
                 </Button>
