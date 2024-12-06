@@ -1,10 +1,10 @@
 import { notFound } from 'next/navigation'
 import { EnhancedComparisonPage } from '@/components/EnhancedComparisonPage'
-import { gitlabFeatures } from '../gitlab/page'
-import { signadotFeatures } from '../signadot/page'
-import { bunnyshellFeatures } from '../bunnyshell/page'
-import { quoveryFeatures } from '../quovery/page'
-import { shipyardFeatures } from '../shipyard/page'
+import { gitlabFeatures } from '../gitlab/features'
+import { signadotFeatures } from '../signadot/features'
+import { bunnyshellFeatures } from '../bunnyshell/features'
+import { quoveryFeatures } from '../quovery/features'
+import { shipyardFeatures } from '../shipyard/features'
 
 const competitorMap = {
   gitlab: { name: 'GitLab', features: gitlabFeatures },

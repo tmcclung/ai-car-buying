@@ -5,6 +5,8 @@ import Link from 'next/link'
 import { Button } from "@/components/ui/button"
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { CheckIcon, XIcon, ArrowRightIcon } from 'lucide-react'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 interface ComparisonPageProps {
   competitorName: string
@@ -18,8 +20,9 @@ interface ComparisonPageProps {
 
 export function EnhancedComparisonPage({ competitorName, features }: ComparisonPageProps) {
   return (
-    <div className="min-h-screen bg-gray-900 text-gray-100">
-      <main>
+    <div className="flex flex-col min-h-screen bg-gray-900 text-gray-100">
+      <Header />
+      <main className="flex-grow">
         <section className="py-12 bg-gradient-to-br from-gray-900 via-gray-800 to-[#00bb93]">
           <div className="container mx-auto px-4">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Release vs {competitorName}</h1>
@@ -124,6 +127,7 @@ export function EnhancedComparisonPage({ competitorName, features }: ComparisonP
           </section>
         </div>
       </main>
+      <Footer />
     </div>
   )
 }
