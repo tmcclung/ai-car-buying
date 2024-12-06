@@ -6,7 +6,17 @@ import { bunnyshellFeatures } from '../bunnyshell/features'
 import { quoveryFeatures } from '../quovery/features'
 import { shipyardFeatures } from '../shipyard/features'
 
-const competitorMap = {
+type CompetitorData = {
+  name: string;
+  features: {
+    name: string;
+    release: boolean;
+    competitor: boolean;
+    description: string;
+  }[];
+};
+
+const competitorMap: Record<string, CompetitorData> = {
   gitlab: { name: 'GitLab', features: gitlabFeatures },
   signadot: { name: 'Signadot', features: signadotFeatures },
   bunnyshell: { name: 'Bunnyshell', features: bunnyshellFeatures },
@@ -16,7 +26,7 @@ const competitorMap = {
 
 export default function ComparisonPage({ params }: { params: { slug: string[] } }) {
   const competitor = params.slug[0]?.split('.')[0].toLowerCase()
-  const competitorData = competitorMap[competitor]
+  const competitorData = competitorMap[competitor as keyof typeof competitorMap]
 
   if (!competitorData) {
     notFound()
