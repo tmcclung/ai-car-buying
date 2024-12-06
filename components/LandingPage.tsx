@@ -3,27 +3,16 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { CheckIcon, StarIcon, Menu, X } from 'lucide-react'
+import { CheckIcon, StarIcon } from 'lucide-react'
 import Link from "next/link"
 import Image from "next/image"
 import Script from 'next/script'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 export function LandingPageComponent() {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [debtBookLogoError, setDebtBookLogoError] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)
-    }
-
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
 
   return (
     <>
@@ -45,49 +34,7 @@ export function LandingPageComponent() {
         src="//js.hs-scripts.com/8047877.js"
       />
       <div className="flex flex-col min-h-screen bg-gray-900 text-gray-100">
-        <header className={`sticky top-0 z-50 w-full border-b border-gray-800 bg-gray-900 text-gray-100 transition-all duration-300 ${isScrolled ? 'py-2' : 'py-4'}`}>
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-between">
-              <Link href="/" className="flex items-center space-x-2">
-                <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/releaselogo-5kSBfSjirGYalBpjEwxUJEKBdrcG02.svg"
-                  alt="Release Logo"
-                  width={110}
-                  height={25}
-                  priority
-                  className="brightness-0 invert"
-                />
-              </Link>
-              <div className="md:hidden">
-                <Button variant="ghost" size="icon" onClick={toggleMenu} aria-label="Toggle menu">
-                  {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-                </Button>
-              </div>
-              <nav className={`${isMenuOpen ? 'flex' : 'hidden'} absolute top-full left-0 right-0 flex-col bg-gray-800 p-4 md:relative md:flex md:flex-row md:items-center md:space-x-4 md:p-0 md:bg-transparent`}>
-                <Link href="#features" className="text-sm font-medium hover:text-gray-300 py-2 md:py-0">Features</Link>
-                <Link href="https://release.com/pricing" className="text-sm font-medium hover:text-gray-300 py-2 md:py-0">Pricing</Link>
-                <Link href="#how-it-works" className="text-sm font-medium hover:text-gray-300 py-2 md:py-0">How it Works</Link>
-                <Link href="https://release.com/use-cases" className="text-sm font-medium hover:text-gray-300 py-2 md:py-0">Use Cases</Link>
-                <Link href="#faq" className="text-sm font-medium hover:text-gray-300 py-2 md:py-0">FAQs</Link>
-                <Link href="https://release.com/blog" className="text-sm font-medium hover:text-gray-300 py-2 md:py-0">Blog</Link>
-                <Link href="https://docs.release.com" className="text-sm font-medium hover:text-gray-300 py-2 md:py-0">Docs</Link>
-                <Link href="https://release.ai" className="text-sm font-medium hover:text-gray-300 py-2 md:py-0">Release.ai</Link>
-                <div className="md:hidden mt-4">
-                  <Link href="https://web.release.com/login" className="block text-sm font-medium hover:text-gray-300 py-2">Login</Link>
-                  <Link href="https://release.com/signup" className="block mt-2">
-                    <Button className="w-full bg-[#00bb93] text-white hover:bg-[#00bb93]/90">Get Started</Button>
-                  </Link>
-                </div>
-              </nav>
-              <div className="hidden md:flex items-center space-x-4">
-                <Link href="https://web.release.com/login" className="text-sm font-medium hover:text-gray-300">Login</Link>
-                <Link href="https://release.com/signup">
-                  <Button className="bg-[#00bb93] text-white hover:bg-[#00bb93]/90">Get Started</Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </header>
+        <Header />
 
         <main className="flex-1">
           <section className="w-full py-8 md:py-12 lg:py-16">
@@ -357,74 +304,7 @@ export function LandingPageComponent() {
           </section>
         </main>
 
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-800 text-gray-300">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-              <div>
-                <h3 className="text-lg font-semibold mb-4 text-[#00bb93]">ABOUT</h3>
-                <ul className="space-y-2">
-                  <li><Link href="https://release.com/company" className="hover:text-[#00bb93] transition-colors">Our Company</Link></li>
-                  <li><Link href="https://release.com/press-releases" className="hover:text-[#00bb93] transition-colors">Press Releases</Link></li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold mb-4 text-[#00bb93]">PRODUCTS</h3>
-                <ul className="space-y-2">
-                  <li><Link href="https://release.com/product/instant-datasets" className="hover:text-[#00bb93] transition-colors">Instant Datasets</Link></li>
-                  <li><Link href="https://release.com/product/release-delivery" className="hover:text-[#00bb93] transition-colors">Release Delivery</Link></li>
-                  <li><Link href="https://release.com/get-started" className="hover:text-[#00bb93] transition-colors">Environments as a Service</Link></li>
-                  <li><Link href="https://release.com/pricing" className="hover:text-[#00bb93] transition-colors">Pricing</Link></li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold mb-4 text-[#00bb93]">WHY US?</h3>
-                <ul className="space-y-2">
-                  <li><Link href="https://release.com/whyrelease" className="hover:text-[#00bb93] transition-colors">Why Release</Link></li>
-                  <li><Link href="https://release.com/build-vs-buy" className="hover:text-[#00bb93] transition-colors">Build vs. Buy</Link></li>
-                  <li><Link href="https://release.com/staging-environments" className="hover:text-[#00bb93] transition-colors">Staging Environments</Link></li>
-                  <li><Link href="https://release.com/ephemeral-environments" className="hover:text-[#00bb93] transition-colors">Ephemeral Environments</Link></li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold mb-4 text-[#00bb93]">RESOURCES</h3>
-                <ul className="space-y-2">
-                  <li><Link href="https://release.com/blog" className="hover:text-[#00bb93] transition-colors">Blog</Link></li>
-                  <li><Link href="https://release.com/use-cases" className="hover:text-[#00bb93] transition-colors">Use Cases</Link></li>
-                  <li><Link href="https://release.com/case-studies" className="hover:text-[#00bb93] transition-colors">Case Studies</Link></li>
-                  <li><Link href="https://release.com/events" className="hover:text-[#00bb93] transition-colors">Events</Link></li>
-                  <li><Link href="https://release.com/resource-hub" className="hover:text-[#00bb93] transition-colors">Resource Hub</Link></li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold mb-4 text-[#00bb93]">GET HELP</h3>
-                <ul className="space-y-2">
-                  <li><Link href="https://docs.release.com" className="hover:text-[#00bb93] transition-colors">Docs</Link></li>
-                  <li><Link href="https://status.release.com/" className="hover:text-[#00bb93] transition-colors">Status</Link></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <footer className="border-t border-gray-800 bg-gray-900">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col gap-4 py-10 md:h-24 md:flex-row md:items-center md:py-0">
-              <div className="flex flex-1 items-center justify-center md:justify-start">
-                <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/releaselogo-5kSBfSjirGYalBpjEwxUJEKBdrcG02.svg"
-                  alt="Release Logo"
-                  width={90}
-                  height={20}
-                  className="brightness-0 invert"
-                />
-              </div>
-              <nav className="flex items-center justify-center gap-4 text-sm md:justify-end">
-                <Link href="https://release.com/terms-of-service" className="text-gray-400 hover:text-gray-300 transition-colors">Terms of Service</Link>
-                <Link href="https://release.com/privacy-policy" className="text-gray-400 hover:text-gray-300 transition-colors">Privacy Policy</Link>
-              </nav>
-            </div>
-          </div>
-        </footer>
+        <Footer />
       </div>
     </>
   )

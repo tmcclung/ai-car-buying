@@ -3,27 +3,14 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { CheckIcon, StarIcon, Menu, X } from 'lucide-react'
+import { CheckIcon, StarIcon, X } from 'lucide-react'
 import Link from "next/link"
 import Image from "next/image"
 import Script from 'next/script'
-import { useState, useEffect } from 'react'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 export function GitLabLandingPageComponent() {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)
-    }
-
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
-
   return (
     <>
       <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-666482049" />
@@ -44,46 +31,7 @@ export function GitLabLandingPageComponent() {
         src="//js.hs-scripts.com/8047877.js"
       />
       <div className="flex flex-col min-h-screen bg-gray-900 text-gray-100">
-        <header className={`sticky top-0 z-50 w-full border-b border-gray-800 bg-gray-900 text-gray-100 transition-all duration-300 ${isScrolled ? 'py-2' : 'py-4'}`}>
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-between">
-              <Link href="/" className="flex items-center space-x-2">
-                <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/releaselogo-5kSBfSjirGYalBpjEwxUJEKBdrcG02.svg"
-                  alt="Release Logo"
-                  width={110}
-                  height={25}
-                  priority
-                  className="brightness-0 invert"
-                />
-              </Link>
-              <div className="md:hidden">
-                <Button variant="ghost" size="icon" onClick={toggleMenu} aria-label="Toggle menu">
-                  {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-                </Button>
-              </div>
-              <nav className={`${isMenuOpen ? 'flex' : 'hidden'} absolute top-full left-0 right-0 flex-col bg-gray-800 p-4 md:relative md:flex md:flex-row md:items-center md:space-x-4 md:p-0 md:bg-transparent`}>
-                <Link href="#features" className="text-sm font-medium hover:text-gray-300 py-2 md:py-0">Features</Link>
-                <Link href="#comparison" className="text-sm font-medium hover:text-gray-300 py-2 md:py-0">Release vs GitLab</Link>
-                <Link href="#how-it-works" className="text-sm font-medium hover:text-gray-300 py-2 md:py-0">How it Works</Link>
-                <Link href="https://release.com/pricing" className="text-sm font-medium hover:text-gray-300 py-2 md:py-0">Pricing</Link>
-                <Link href="#faq" className="text-sm font-medium hover:text-gray-300 py-2 md:py-0">FAQs</Link>
-                <div className="md:hidden mt-4">
-                  <Link href="https://web.release.com/login" className="block text-sm font-medium hover:text-gray-300 py-2">Login</Link>
-                  <Link href="https://release.com/signup" className="block mt-2">
-                    <Button className="w-full bg-[#00bb93] text-white hover:bg-[#00bb93]/90">Get Started</Button>
-                  </Link>
-                </div>
-              </nav>
-              <div className="hidden md:flex items-center space-x-4">
-                <Link href="https://web.release.com/login" className="text-sm font-medium hover:text-gray-300">Login</Link>
-                <Link href="https://release.com/signup">
-                  <Button className="bg-[#00bb93] text-white hover:bg-[#00bb93]/90">Get Started</Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </header>
+        <Header />
 
         <main className="flex-1">
           <section className="w-full py-8 md:py-12 lg:py-16">
@@ -334,25 +282,7 @@ export function GitLabLandingPageComponent() {
           </section>
         </main>
 
-        <footer className="border-t border-gray-800 bg-gray-900">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col gap-4 py-10 md:h-24 md:flex-row md:items-center md:py-0">
-              <div className="flex flex-1 items-center justify-center md:justify-start">
-                <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/releaselogo-5kSBfSjirGYalBpjEwxUJEKBdrcG02.svg"
-                  alt="Release Logo"
-                  width={90}
-                  height={20}
-                  className="brightness-0 invert"
-                />
-              </div>
-              <nav className="flex items-center justify-center gap-4 text-sm md:justify-end">
-                <Link href="https://release.com/terms-of-service" className="text-gray-400 hover:text-gray-300 transition-colors">Terms of Service</Link>
-                <Link href="https://release.com/privacy-policy" className="text-gray-400 hover:text-gray-300 transition-colors">Privacy Policy</Link>
-              </nav>
-            </div>
-          </div>
-        </footer>
+        <Footer />
       </div>
     </>
   )
