@@ -29,7 +29,7 @@ export default function ComparisonPage({ params }: { params: { slug: string[] } 
   const competitorData = competitorMap[competitor as keyof typeof competitorMap]
 
   if (!competitorData) {
-    redirect('/')
+    redirect('/comparison')
   }
 
   return (
