@@ -1,15 +1,15 @@
-export const quoveryFeatures = [
+export const qoveryFeatures = [
   {
     name: "Ephemeral Environments",
     release: true,
     competitor: true,
-    description: "Both Release and Quovery offer ephemeral environments, but Release provides more advanced isolation and disposability for every pull request, offering superior testing and development capabilities."
+    description: "Both Release and Qovery offer ephemeral environments, but Release provides more advanced isolation and disposability for every pull request, offering superior testing and development capabilities."
   },
   {
     name: "Complex Environment Support",
     release: true,
     competitor: false,
-    description: "Release excels in supporting complex, multi-service architectures and microservices across various cloud providers. Quovery's support for intricate setups is more limited, especially for multi-cloud scenarios."
+    description: "Release excels in supporting complex, multi-service architectures and microservices across various cloud providers. Qovery's support for intricate setups is more limited, especially for multi-cloud scenarios."
   },
   {
     name: "Environment-based CI/CD",
@@ -21,13 +21,13 @@ export const quoveryFeatures = [
     name: "Infrastructure as Code",
     release: true,
     competitor: true,
-    description: "Release supports a wider range of IaC tools including Terraform, Helm, and Docker Compose. Quovery has IaC capabilities, but Release offers more flexibility and integration options."
+    description: "Release supports a wider range of IaC tools including Terraform, Helm, and Docker Compose. Qovery has IaC capabilities, but Release offers more flexibility and integration options."
   },
   {
     name: "Cost-Effectiveness",
     release: true,
     competitor: false,
-    description: "Release's efficient resource allocation and management typically result in 40-60% cost savings on DevOps compared to Quovery, especially for complex, multi-environment setups."
+    description: "Release's efficient resource allocation and management typically result in 40-60% cost savings on DevOps compared to Qovery, especially for complex, multi-environment setups."
   },
   {
     name: "Developer Productivity",

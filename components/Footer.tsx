@@ -56,13 +56,20 @@ export default function Footer() {
               <li><Link href="/comparison/gitlab" className="hover:text-[#00bb93] transition-colors">Release vs. GitLab</Link></li>
               <li><Link href="/comparison/signadot" className="hover:text-[#00bb93] transition-colors">Release vs. Signadot</Link></li>
               <li><Link href="/comparison/bunnyshell" className="hover:text-[#00bb93] transition-colors">Release vs. Bunnyshell</Link></li>
-              <li><Link href="/comparison/quovery" className="hover:text-[#00bb93] transition-colors">Release vs. Quovery</Link></li>
+              <li><Link href="/comparison/qovery" className="hover:text-[#00bb93] transition-colors">Release vs. Qovery</Link></li>
               <li><Link href="/comparison/shipyard" className="hover:text-[#00bb93] transition-colors">Release vs. Shipyard</Link></li>
             </ul>
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-gray-800 text-center">
-          <p>&copy; {new Date().getFullYear()} Release. All rights reserved.</p>
+          <nav className="flex items-center justify-center gap-4 sm:gap-6">
+            <Link href="https://release.com/terms-of-service" className="text-xs hover:underline underline-offset-4">Terms</Link>
+            <Link href="https://release.com/privacy-policy" className="text-xs hover:underline underline-offset-4">Privacy</Link>
+            <Link href="https://release.com/security" className="text-xs hover:underline underline-offset-4">Security</Link>
+          </nav>
+          <p className="text-xs text-muted-foreground">
+            &copy; {new Date().getFullYear()} Release Technologies, Inc. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

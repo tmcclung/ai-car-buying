@@ -1,41 +1,49 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useSearchParams } from 'next/navigation'
+import dynamic from 'next/dynamic'
 
-interface ClientSideRendererProps {
-  children: (props: { showGitLabVersion: boolean }) => React.ReactNode
-}
+const LandingPage = dynamic(() => import('@/components/LandingPage'), { ssr: false })
+const GitLabLandingPage = dynamic(() => import('@/components/GitLabLandingPage'), { ssr: false })
+const KubernetesLandingPage = dynamic(() => import('@/components/KubernetesLandingPage'), { ssr: false })
 
-export function ClientSideRenderer({ children }: ClientSideRendererProps) {
+export default function ClientSideRenderer({ initialVersion }: { initialVersion: string }) {
+  const [version, setVersion] = useState(initialVersion)
+  const [isLoading, setIsLoading] = useState(true)
   const searchParams = useSearchParams()
-  const [showGitLabVersion, setShowGitLabVersion] = useState(false)
-  const [isHydrated, setIsHydrated] = useState(false)
 
   useEffect(() => {
-    const storedPreference = localStorage.getItem('showGitLabVersion')
     const urlVersion = searchParams.get('version')
-
-    if (urlVersion === 'gitlab') {
-      setShowGitLabVersion(true)
-      localStorage.setItem('showGitLabVersion', 'true')
-    } else if (urlVersion === 'regular' || (!urlVersion && storedPreference !== 'true')) {
-      setShowGitLabVersion(false)
-      localStorage.setItem('showGitLabVersion', 'false')
-    } else if (storedPreference === 'true') {
-      setShowGitLabVersion(true)
+    if (urlVersion) {
+      setVersion(urlVersion)
+      localStorage.setItem('landing_version', urlVersion)
     } else {
-      setShowGitLabVersion(false)
+      const storedVersion = localStorage.getItem('landing_version')
+      if (storedVersion) {
+        setVersion(storedVersion)
+      }
     }
-
-    setIsHydrated(true)
+    
+    // Pre-load all components
+    Promise.all([
+      import('@/components/LandingPage'),
+      import('@/components/GitLabLandingPage'),
+      import('@/components/KubernetesLandingPage')
+    ]).then(() => {
+      setIsLoading(false)
+    })
   }, [searchParams])
 
-  if (!isHydrated) {
-    return null
+  if (isLoading) {
+    return <div className="min-h-screen bg-gray-900" />
   }
 
-  return <>{children({ showGitLabVersion })}</>
+  return (
+    <div className="fade-in">
+      {version === 'gitlab' && <GitLabLandingPage />}
+      {(version === 'kubernetes' || version === 'k8s') && <KubernetesLandingPage />}
+      {(version !== 'gitlab' && version !== 'kubernetes' && version !== 'k8s') && <LandingPage />}
+    </div>
+  )
 }
-
-export default ClientSideRenderer

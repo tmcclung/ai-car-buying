@@ -9,14 +9,14 @@ import Footer from '@/components/Footer'
 import { gitlabFeatures } from './gitlab/features'
 import { signadotFeatures } from './signadot/features'
 import { bunnyshellFeatures } from './bunnyshell/features'
-import { quoveryFeatures } from './quovery/features'
+import { qoveryFeatures } from './qovery/features'
 import { shipyardFeatures } from './shipyard/features'
 
 const competitors = [
   { name: 'GitLab', features: gitlabFeatures, path: '/comparison/gitlab' },
   { name: 'Signadot', features: signadotFeatures, path: '/comparison/signadot' },
   { name: 'Bunnyshell', features: bunnyshellFeatures, path: '/comparison/bunnyshell' },
-  { name: 'Quovery', features: quoveryFeatures, path: '/comparison/quovery' },
+  { name: 'Qovery', features: qoveryFeatures, path: '/comparison/qovery' },
   { name: 'Shipyard', features: shipyardFeatures, path: '/comparison/shipyard' }
 ]
 

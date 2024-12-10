@@ -36,7 +36,7 @@ export default function Header() {
             />
           </Link>
           <div className="md:hidden">
-            <Button variant="ghost" size="icon" onClick={toggleMenu} aria-label="Toggle menu">
+            <Button variant="ghost" size="sm" onClick={toggleMenu} aria-label="Toggle menu">
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
           </div>

@@ -3,7 +3,7 @@ import { EnhancedComparisonPage } from '@/components/EnhancedComparisonPage'
 import { gitlabFeatures } from '../gitlab/features'
 import { signadotFeatures } from '../signadot/features'
 import { bunnyshellFeatures } from '../bunnyshell/features'
-import { quoveryFeatures } from '../quovery/features'
+import { qoveryFeatures } from '../qovery/features'
 import { shipyardFeatures } from '../shipyard/features'
 
 type CompetitorData = {
@@ -20,7 +20,8 @@ const competitorMap: Record<string, CompetitorData> = {
   gitlab: { name: 'GitLab', features: gitlabFeatures },
   signadot: { name: 'Signadot', features: signadotFeatures },
   bunnyshell: { name: 'Bunnyshell', features: bunnyshellFeatures },
-  quovery: { name: 'Quovery', features: quoveryFeatures },
+  qovery: { name: 'Qovery', features: qoveryFeatures },
+  quovery: { name: 'Qovery', features: qoveryFeatures },
   shipyard: { name: 'Shipyard', features: shipyardFeatures },
 }
 
