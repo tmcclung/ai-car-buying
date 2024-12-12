@@ -54,7 +54,7 @@ export default function HerokuLandingPage({ version = 'heroku' }: { version?: st
                   </blockquote>
                   <div className="mt-4 flex items-center">
                     <Image
-                      src="/placeholder.svg"
+                      src="/DB-Logo_Blue-MD-AX8qss5c3JystqyyNzAiKzp0jO26bG.webp"
                       alt="Customer Logo"
                       width={60}
                       height={20}
