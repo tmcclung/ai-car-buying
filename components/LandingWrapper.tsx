@@ -1,23 +1,26 @@
 'use client'
 
-import { useEffect, useState, ComponentType } from 'react'
+import React, { useState, useEffect, ComponentType } from 'react';
 
 type LandingWrapperProps = {
   initialVersion: string | undefined
   LandingPage: ComponentType
   GitLabLandingPage: ComponentType
   KubernetesLandingPage: ComponentType
+  HerokuLandingPage: ComponentType
 }
 
 export default function LandingWrapper({ 
   initialVersion,
   LandingPage,
   GitLabLandingPage,
-  KubernetesLandingPage
+  KubernetesLandingPage,
+  HerokuLandingPage
 }: LandingWrapperProps) {
   const [CurrentComponent, setCurrentComponent] = useState<ComponentType | null>(() => {
     if (initialVersion === 'gitlab' && GitLabLandingPage) return GitLabLandingPage
     if (initialVersion === 'k8s' && KubernetesLandingPage) return KubernetesLandingPage
+    if (initialVersion === 'heroku' && HerokuLandingPage) return HerokuLandingPage
     return LandingPage || null
   })
 
@@ -41,6 +44,9 @@ export default function LandingWrapper({
       case 'k8s':
         newComponent = KubernetesLandingPage || null
         break
+      case 'heroku':
+        newComponent = HerokuLandingPage || null
+        break
       default:
         newComponent = LandingPage || null
     }
@@ -56,7 +62,7 @@ export default function LandingWrapper({
         localStorage.setItem('landing_version', version)
       }
     }
-  }, [initialVersion, LandingPage, GitLabLandingPage, KubernetesLandingPage, CurrentComponent])
+  }, [initialVersion, LandingPage, GitLabLandingPage, KubernetesLandingPage, HerokuLandingPage, CurrentComponent])
 
   if (!CurrentComponent) {
     return <div>Loading...</div>
@@ -64,3 +70,4 @@ export default function LandingWrapper({
 
   return <CurrentComponent />
 }
+
