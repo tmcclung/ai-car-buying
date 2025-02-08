@@ -1,7 +1,10 @@
 FROM node:20-slim AS base
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
-RUN corepack enable
+
+# work around core pack issue
+# https://github.com/nodejs/corepack/issues/616#issuecomment-2622079955
+RUN npm install -g corepack@latest && corepack enable
 RUN apt-get update && apt-get install curl -y
 
 # Install dependencies only when needed
