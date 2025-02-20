@@ -7,6 +7,9 @@ ENV PATH="$PNPM_HOME:$PATH"
 RUN npm install -g corepack@latest && corepack enable
 RUN apt-get update && apt-get install curl -y
 
+# Install (prepare) and activate pnpm via Corepack
+RUN corepack prepare pnpm@latest --activate
+
 # Install dependencies only when needed
 FROM base AS deps
 WORKDIR /build
@@ -54,7 +57,7 @@ RUN adduser --system --uid 1001 nextjs
 RUN mkdir .next
 RUN chown nextjs:nodejs .next
 
-COPY package.json pnpm-lock.yaml .npmrc ./
+COPY package.json pnpm-lock.yaml .npmrc .stignore ./
 
 COPY --from=builder /app/node_modules /app/node_modules
 COPY --from=builder /app/.next /app/.next

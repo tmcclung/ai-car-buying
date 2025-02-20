@@ -1,0 +1,5 @@
+# .stignore
+# Don't sync these files from remote development environment
+
+node_modules
+.pnpm-store
