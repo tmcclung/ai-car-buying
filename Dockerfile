@@ -14,7 +14,7 @@ RUN corepack prepare pnpm@latest --activate
 FROM base AS deps
 WORKDIR /build
 COPY package.json pnpm-lock.yaml .npmrc ./
-RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --frozen-lockfile
+RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --no-frozen-lockfile
 
 # Rebuild the source code only when needed and upload the sourcemaps
 FROM base AS builder
@@ -39,7 +39,7 @@ RUN pnpm build
 ENV NEXT_TELEMETRY_DISABLED 1
 
 # Prune out the devDependencies from node_modules after build
-RUN pnpm install --production --frozen-lockfile
+RUN pnpm install --production --no-frozen-lockfile
 
 # Production image, copy all the files and run next
 FROM base AS runner
