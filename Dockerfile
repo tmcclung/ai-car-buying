@@ -59,8 +59,10 @@ RUN chown nextjs:nodejs .next
 
 COPY package.json pnpm-lock.yaml .npmrc .stignore ./
 
+# Copy necessary files from the builder stage
 COPY --from=builder /app/node_modules /app/node_modules
 COPY --from=builder /app/.next /app/.next
+COPY --from=builder /app/public /app/public
 
 #USER nextjs
 
