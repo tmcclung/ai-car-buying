@@ -20,7 +20,7 @@ export default function TruckSearchPage() {
       model: "F-150 Lariat",
       year: 2025,
       price: 58375,
-      image: "/placeholder.svg?key=ztaas",
+      image: "/images/cars/ford-f150-lariat.png",
       engine: "3.5L EcoBoost V6",
       features: ["4x4", "Towing Package", "Leather Interior"],
       mileage: 0,
@@ -34,7 +34,7 @@ export default function TruckSearchPage() {
       model: "F-150 XLT",
       year: 2025,
       price: 49250,
-      image: "/placeholder.svg?key=jk177",
+      image: "/images/cars/2025-Ford-F-150.avif",
       engine: "2.7L EcoBoost V6",
       features: ["4x4", "Towing Package", "Sport Appearance"],
       mileage: 0,
@@ -48,7 +48,7 @@ export default function TruckSearchPage() {
       model: "Silverado 1500 LT",
       year: 2025,
       price: 48900,
-      image: "/placeholder.svg?key=p9dkl",
+      image: "/images/cars/2025-Chevrolet-Silverado_1500.avif",
       engine: "5.3L V8",
       features: ["4x4", "Z71 Off-Road Package"],
       mileage: 0,
@@ -62,7 +62,7 @@ export default function TruckSearchPage() {
       model: "1500 Big Horn",
       year: 2025,
       price: 50200,
-      image: "/placeholder.svg?key=ow9dn",
+      image: "/images/cars/2025-Chevrolet-Silverado_1500.avif",
       engine: "3.6L V6",
       features: ["4x4", "Level 2 Equipment Group"],
       mileage: 0,
@@ -263,7 +263,7 @@ export default function TruckSearchPage() {
                   <div className="flex items-center gap-3">
                     <div className="w-16 h-16 rounded-md overflow-hidden flex-shrink-0">
                       <img
-                        src="/placeholder.svg?key=ztaas"
+                        src="/images/cars/ford-f150-lariat.png"
                         alt="Ford F-150 Lariat"
                         className="w-full h-full object-cover"
                       />
@@ -286,7 +286,7 @@ export default function TruckSearchPage() {
                   <div className="flex items-center gap-3">
                     <div className="w-16 h-16 rounded-md overflow-hidden flex-shrink-0">
                       <img
-                        src="/placeholder.svg?key=jk177"
+                        src="/images/cars/2025-Ford-F-150.avif"
                         alt="Ford F-150 XLT"
                         className="w-full h-full object-cover"
                       />
@@ -498,7 +498,7 @@ export default function TruckSearchPage() {
                           <div className="flex flex-col md:flex-row">
                             <div className="md:w-1/3 relative">
                               <img
-                                src="/placeholder.svg?key=jk177"
+                                src="/images/cars/2025-Ford-F-150.avif"
                                 alt="Ford F-150 XLT"
                                 className="w-full h-48 md:h-full object-cover"
                               />

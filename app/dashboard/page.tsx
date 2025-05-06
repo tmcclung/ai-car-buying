@@ -162,7 +162,7 @@ export default function Dashboard() {
                               <div className="flex">
                                 <div className="w-1/3">
                                   <img
-                                    src="/placeholder.svg?key=ztaas"
+                                    src="/images/cars/ford-f150-lariat.png"
                                     alt="Ford F-150 Lariat"
                                     className="h-full w-full object-cover"
                                   />
@@ -196,7 +196,7 @@ export default function Dashboard() {
                               <div className="flex">
                                 <div className="w-1/3">
                                   <img
-                                    src="/placeholder.svg?key=jk177"
+                                    src="/images/cars/2025-Ford-F-150.avif"
                                     alt="Ford F-150 XLT"
                                     className="h-full w-full object-cover"
                                   />
@@ -292,7 +292,7 @@ export default function Dashboard() {
                               <div className="flex">
                                 <div className="w-1/3">
                                   <img
-                                    src="/placeholder.svg?key=hj9k2"
+                                    src="/images/cars/2025-Toyota-Highlander-silver.avif"
                                     alt="Toyota Highlander"
                                     className="h-full w-full object-cover"
                                   />
@@ -365,7 +365,7 @@ export default function Dashboard() {
                   {/* Owned Car Card */}
                   <Card className="border rounded-xl overflow-hidden">
                     <div className="relative">
-                      <img src="/placeholder.svg?key=ow9dn" alt="Toyota Camry" className="w-full h-48 object-cover" />
+                      <img src="/images/cars/2022-Toyota-Camry.avif" alt="Toyota Camry" className="w-full h-48 object-cover" />
                       <Badge className="absolute top-2 right-2 bg-green-100 text-green-800 hover:bg-green-100">
                         Owned
                       </Badge>
@@ -405,7 +405,7 @@ export default function Dashboard() {
                   {/* Owned Car Card 2 */}
                   <Card className="border rounded-xl overflow-hidden">
                     <div className="relative">
-                      <img src="/placeholder.svg?key=p9dkl" alt="Honda CR-V" className="w-full h-48 object-cover" />
+                      <img src="/images/cars/2020-Honda-CR-V.avif" alt="Honda CR-V" className="w-full h-48 object-cover" />
                       <Badge className="absolute top-2 right-2 bg-green-100 text-green-800 hover:bg-green-100">
                         Owned
                       </Badge>

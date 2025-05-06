@@ -66,7 +66,7 @@ export default function FordF150XLTPage() {
               <Card className="border rounded-xl overflow-hidden mb-6">
                 <div className="relative">
                   <img
-                    src="/placeholder.svg?key=jk177"
+                    src="/images/cars/2025-Ford-F-150.avif"
                     alt="Ford F-150 XLT"
                     className="w-full h-[400px] object-cover"
                   />
@@ -553,7 +553,7 @@ export default function FordF150XLTPage() {
                   <div className="flex gap-3">
                     <div className="w-20 h-16 rounded-md overflow-hidden flex-shrink-0">
                       <img
-                        src="/placeholder.svg?key=ztaas"
+                        src="/images/cars/ford-f150-lariat.png"
                         alt="Ford F-150 Lariat"
                         className="w-full h-full object-cover"
                       />
@@ -570,7 +570,7 @@ export default function FordF150XLTPage() {
                   <div className="flex gap-3">
                     <div className="w-20 h-16 rounded-md overflow-hidden flex-shrink-0">
                       <img
-                        src="/placeholder.svg?key=p9dkl"
+                        src="/images/cars/2025-Chevrolet-Silverado_1500.avif"
                         alt="Chevrolet Silverado 1500 LT"
                         className="w-full h-full object-cover"
                       />
@@ -589,7 +589,7 @@ export default function FordF150XLTPage() {
                   <div className="flex gap-3">
                     <div className="w-20 h-16 rounded-md overflow-hidden flex-shrink-0">
                       <img
-                        src="/placeholder.svg?key=ow9dn"
+                        src="/images/cars/2025-Chevrolet-Silverado_1500.avif"
                         alt="RAM 1500 Big Horn"
                         className="w-full h-full object-cover"
                       />

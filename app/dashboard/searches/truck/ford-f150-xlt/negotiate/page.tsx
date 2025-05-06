@@ -84,7 +84,7 @@ export default function NegotiationPage() {
             <div className="lg:col-span-4 space-y-6">
               <Card className="border rounded-xl overflow-hidden sticky top-24">
                 <div className="relative">
-                  <img src="/placeholder.svg?key=jk177" alt="Ford F-150 XLT" className="w-full h-48 object-cover" />
+                  <img src="/images/cars/2025-Ford-F-150.avif" alt="Ford F-150 XLT" className="w-full h-48 object-cover" />
                   <Button
                     size="sm"
                     variant="ghost"

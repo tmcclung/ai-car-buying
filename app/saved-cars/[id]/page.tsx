@@ -50,7 +50,7 @@ export default function CarNegotiationPage() {
             <div className="lg:col-span-1">
               <Card className="border rounded-xl overflow-hidden sticky top-24">
                 <div className="relative">
-                  <img src="/placeholder.svg?key=bygy0" alt="Tesla Model Y" className="w-full h-48 object-cover" />
+                  <img src="/images/ford-f150-lariat.png" alt="Ford F-150 Lariat" className="w-full h-48 object-cover" />
                   <Button
                     size="sm"
                     variant="ghost"
@@ -62,8 +62,8 @@ export default function CarNegotiationPage() {
                 <div className="p-4">
                   <div className="flex justify-between items-start">
                     <div>
-                      <h2 className="font-semibold text-xl">Tesla Model Y</h2>
-                      <p className="text-gray-500">Long Range AWD</p>
+                      <h2 className="font-semibold text-xl">Ford F-150 Lariat</h2>
+                      <p className="text-gray-500">3.5L EcoBoost V6</p>
                     </div>
                     <div className="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">Negotiating</div>
                   </div>
@@ -71,19 +71,19 @@ export default function CarNegotiationPage() {
                   <div className="mt-4 space-y-2">
                     <div className="flex justify-between">
                       <span className="text-gray-500">MSRP</span>
-                      <span className="font-medium">$54,990</span>
+                      <span className="font-medium">$58,375</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-gray-500">Target Price</span>
-                      <span className="font-medium text-blue-600">$51,750</span>
+                      <span className="font-medium text-blue-600">$54,500</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-gray-500">Current Offer</span>
-                      <span className="font-medium text-green-600">$52,990</span>
+                      <span className="font-medium text-green-600">$56,200</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-gray-500">Potential Savings</span>
-                      <span className="font-medium text-green-600">$2,000</span>
+                      <span className="font-medium text-green-600">$2,175</span>
                     </div>
                   </div>
 
@@ -104,7 +104,7 @@ export default function CarNegotiationPage() {
                           <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                           <polyline points="22 4 12 14.01 9 11.01"></polyline>
                         </svg>
-                        <span>330 mile range</span>
+                        <span>3.5L EcoBoost V6 Engine</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <svg
@@ -184,8 +184,8 @@ export default function CarNegotiationPage() {
                         <span className="text-xs text-gray-500">May 19, 10:32 AM</span>
                       </div>
                       <p className="text-sm">
-                        I've started negotiations for your Tesla Model Y. Based on current market data, I've set a
-                        target price of $51,750, which is $3,240 below MSRP.
+                        I've started negotiations for your Ford F-150 Lariat. Based on current market data, I've set a
+                        target price of $54,500, which is $3,875 below MSRP.
                       </p>
                     </div>
                   </div>
@@ -193,7 +193,7 @@ export default function CarNegotiationPage() {
                   {/* User Message */}
                   <div className="flex gap-3 justify-end">
                     <div className="flex flex-col gap-1 rounded-xl bg-blue-600 p-3 text-white max-w-[80%]">
-                      <p className="text-sm">That sounds great. What's your strategy for negotiating with Tesla?</p>
+                      <p className="text-sm">That sounds great. What's your strategy for negotiating with Ford?</p>
                     </div>
                     <div className="w-8 h-8 rounded-full bg-gray-200 flex-shrink-0 flex items-center justify-center mt-1">
                       <User className="h-4 w-4 text-gray-600" />
@@ -211,13 +211,13 @@ export default function CarNegotiationPage() {
                         <span className="text-xs text-gray-500">May 19, 10:35 AM</span>
                       </div>
                       <p className="text-sm">
-                        Tesla doesn't typically negotiate on price like traditional dealerships, but I'm using several
+                        Ford doesn't typically negotiate on price like traditional dealerships, but I'm using several
                         approaches:
                       </p>
                       <ol className="list-decimal text-sm pl-4 space-y-1 mt-1">
-                        <li>Comparing inventory across multiple Tesla locations to find the best-priced vehicle</li>
+                        <li>Comparing inventory across multiple Ford locations to find the best-priced vehicle</li>
                         <li>Looking for demo vehicles or inventory models that may be discounted</li>
-                        <li>Checking for any end-of-quarter incentives Tesla might be offering</li>
+                        <li>Checking for any end-of-quarter incentives Ford might be offering</li>
                         <li>Exploring whether adding or removing certain options affects the final price</li>
                       </ol>
                     </div>
@@ -234,9 +234,9 @@ export default function CarNegotiationPage() {
                         <span className="text-xs text-gray-500">May 19, 3:45 PM</span>
                       </div>
                       <p className="text-sm">
-                        Update: I've found a Tesla Model Y Long Range AWD with your exact specifications at the Fremont
+                        Update: I've found a Ford F-150 Lariat with your exact specifications at the Fremont
                         delivery center. They have a demo model with only 300 miles that they're willing to sell for
-                        $52,990. This is $2,000 below MSRP but still $1,240 above our target price.
+                        $56,200. This is $2,175 below MSRP but still $1,240 above our target price.
                       </p>
                     </div>
                   </div>
@@ -266,11 +266,11 @@ export default function CarNegotiationPage() {
                       </div>
                       <p className="text-sm">
                         Good thinking! I've analyzed the options and found that switching from the Pearl White to the
-                        standard White color would save $1,000, bringing the price down to $51,990 - just $240 above our
+                        standard White color would save $1,000, bringing the price down to $55,500 - just $240 above our
                         target.
                       </p>
                       <p className="text-sm mt-2">
-                        Additionally, I've discovered that Tesla is offering a $500 discount if you take delivery before
+                        Additionally, I've discovered that Ford is offering a $500 discount if you take delivery before
                         the end of the month. Would you be able to accept delivery within the next 10 days?
                       </p>
                     </div>

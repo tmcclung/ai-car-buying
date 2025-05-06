@@ -50,7 +50,7 @@ export default function CarNegotiationPage() {
             <div className="lg:col-span-1">
               <Card className="border rounded-xl overflow-hidden sticky top-24">
                 <div className="relative">
-                  <img src="/placeholder.svg?key=pm4k7" alt="Ford F-150 Lariat" className="w-full h-48 object-cover" />
+                  <img src="/images/ford-f150-lariat.png" alt="Ford F-150 Lariat" className="w-full h-48 object-cover" />
                   <Button
                     size="sm"
                     variant="ghost"
