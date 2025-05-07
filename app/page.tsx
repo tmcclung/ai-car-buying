@@ -54,7 +54,7 @@ export default function LandingPage() {
               </div>
               <div className="rounded-2xl overflow-hidden">
                 <img
-                  src="/placeholder.svg?key=5pzyy"
+                  src="/images/hero.png"
                   alt="AI Car Buying Experience"
                   className="w-full h-auto object-cover"
                 />
